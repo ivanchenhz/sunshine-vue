@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { SsSheet } from './components/SsSheet'
+import { SsSheet } from './components'
 
 const lib = 'Sunshine'
 </script>

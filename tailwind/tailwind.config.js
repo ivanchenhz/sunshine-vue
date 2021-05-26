@@ -1,4 +1,4 @@
-const colors = require('./src/style/colors');
+const colors = require('./colors');
 
 module.exports = {
   prefix: 'ss-',

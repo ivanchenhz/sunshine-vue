@@ -1,4 +1,4 @@
-import { computed } from 'vue';
+import { computed, PropType } from 'vue';
 
 /**
  * Keep followings classes from tailwind ( purge )
@@ -22,7 +22,7 @@ export interface BorderProps {
 const BorderPropValue = ['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', 'full']
 export const borderProps = {
   rounded: {
-    type: String,
+    type: String as PropType<BorderPropValue>,
     validator: (rounded: string) => {
       return BorderPropValue.includes(rounded)
     },

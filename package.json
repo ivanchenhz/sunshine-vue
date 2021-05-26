@@ -6,15 +6,18 @@
   ],
   "main": "./dist/sunshine-vue.umd.js",
   "module": "./dist/sunshine-vue.es.js",
+  "style": "./dist/style.css",
   "exports": {
     ".": {
       "import": "./dist/sunshine-vue.es.js",
       "require": "./dist/sunshine-vue.umd.js"
-    }
+    },
+    "./": "./"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build"
+    "build": "vue-tsc --noEmit && vite build",
+    "dev:website": "pnpm -C ./website dev"
   },
   "dependencies": {
     "vue": "^3.0.5"
