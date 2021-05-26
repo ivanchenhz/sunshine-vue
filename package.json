@@ -17,9 +17,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "dev:website": "pnpm -C ./website dev"
+    "dev:website": "pnpm -C ./website dev",
+    "build:website": "pnpm -C ./website build"
   },
   "dependencies": {
+    "@heroicons/vue": "^1.0.1",
     "vue": "^3.0.5"
   },
   "devDependencies": {

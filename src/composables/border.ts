@@ -13,18 +13,18 @@ import { computed, PropType } from 'vue';
  * ss-rounded-3xl
  * ss-rounded-full
  */
-type BorderPropValue = 'none' | 'sm' | '' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full'
+type RoundedProp = 'none' | 'sm' | '' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full'
 
 export interface BorderProps {
-  rounded: BorderPropValue
+  rounded: RoundedProp
 }
 
-const BorderPropValue = ['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', 'full']
+const RoundedPropValues = ['none', 'sm', '', 'md', 'lg', 'xl', '2xl', '3xl', 'full']
 export const borderProps = {
   rounded: {
-    type: String as PropType<BorderPropValue>,
+    type: String as PropType<RoundedProp>,
     validator: (rounded: string) => {
-      return BorderPropValue.includes(rounded)
+      return RoundedPropValues.includes(rounded)
     },
     default: '',
   },

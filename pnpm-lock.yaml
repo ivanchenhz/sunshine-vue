@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@heroicons/vue': ^1.0.1
       '@vitejs/plugin-vue': ^1.2.2
       '@vue/compiler-sfc': ^3.0.5
       autoprefixer: ^10.2.5
@@ -14,6 +15,7 @@ importers:
       vue: ^3.0.5
       vue-tsc: ^0.0.24
     dependencies:
+      '@heroicons/vue': 1.0.1_vue@3.0.11
       vue: 3.0.11
     devDependencies:
       '@vitejs/plugin-vue': 1.2.2_@vue+compiler-sfc@3.0.11
@@ -27,14 +29,16 @@ importers:
 
   website:
     specifiers:
+      '@heroicons/vue': ^1.0.1
       '@vitejs/plugin-vue': ^1.2.2
       '@vue/compiler-sfc': ^3.0.5
-      sunshine-vue: workspace:^0.0.0
+      sunshine-vue: workspace:*
       typescript: ^4.1.3
       vite: ^2.3.4
       vue: ^3.0.5
       vue-tsc: ^0.0.24
     dependencies:
+      '@heroicons/vue': 1.0.1_vue@3.0.11
       sunshine-vue: link:..
       vue: 3.0.11
     devDependencies:
@@ -65,6 +69,14 @@ packages:
     dependencies:
       purgecss: 3.1.3
     dev: true
+
+  /@heroicons/vue/1.0.1_vue@3.0.11:
+    resolution: {integrity: sha512-pClbScVNpkBCHdM86+EAjQ5iUAs1PVjRHDFRNImQQyot75KrAk4SDfeKGDkQqPaGdJ9ZHIK13cl2W0eYc29QWg==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.0.11
+    dev: false
 
   /@nodelib/fs.scandir/2.1.4:
     resolution: {integrity: sha512-33g3pMJk3bg5nXbL/+CY6I2eJDzZAni49PfJnL5fghPTggPvBd/pFNSgJsdAgWptuFu7qq/ERvOYFlhvsLTCKA==}
@@ -1051,8 +1063,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/2.50.0:
-    resolution: {integrity: sha512-wO+F2MqWPGUCZx0549oqY8dsQqHVjuSxoyBWWnxKoQE+1UGcDKjtL7wHq/8jnnLJEeoGDQLf3ztrpgRwlbGJ0A==}
+  /rollup/2.50.1:
+    resolution: {integrity: sha512-3MQhSdGpms4xjYrtR3WNHMT+VrWWM4oqUxUC770MmLo1FWFR2pr/OL81HSPC/ifmiu0uMFk0qPGLmjkSMRIESw==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -1221,7 +1233,7 @@ packages:
       esbuild: 0.11.23
       postcss: 8.3.0
       resolve: 1.20.0
-      rollup: 2.50.0
+      rollup: 2.50.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
