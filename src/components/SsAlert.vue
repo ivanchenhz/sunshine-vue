@@ -1,13 +1,13 @@
 <template>
   <SsSheet v-if="active" class="ss-p-4 ss-pr-6 ss-border-l-8 ss-min-w-[320px] ss-flex ss-items-center ss-relative">
-    <div v-if="$slots.left" class="ss-mr-1">
-      <slot name="left"></slot>
+    <div v-if="$slots.prepend" class="ss-mr-1">
+      <slot name="prepend"></slot>
     </div>
 
     <slot></slot>
 
-    <div v-if="$slots.right" class="ss-ml-auto">
-      <slot name="right"></slot>
+    <div v-if="$slots.append" class="ss-ml-auto">
+      <slot name="append"></slot>
     </div>
 
     <div

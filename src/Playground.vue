@@ -14,13 +14,13 @@
       <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
 
       <ss-alert rounded="lg" elevation="lg">
-        <template #left>
+        <template #prepend>
           <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
         </template>
 
         hello
 
-        <template #right>
+        <template #append>
           there
         </template>
       </ss-alert>
