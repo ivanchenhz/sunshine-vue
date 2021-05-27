@@ -9,18 +9,18 @@ import { computed, PropType } from 'vue';
  * ss-shadow-lg
  * ss-shadow-xl
  */
-type ElevationPropValue = 'none' | '' | 'md' | 'lg' | 'xl'
+type ElevationProp = 'none' | '' | 'md' | 'lg' | 'xl'
 
 export interface ElevationProps {
-  elevation: ElevationPropValue
+  elevation: ElevationProp
 }
 
-const ElevationPropValue = ['none', '', 'md', 'lg', 'xl']
+const ElevationPropValues = ['none', '', 'md', 'lg', 'xl']
 export const elevationProps = {
   elevation: {
-    type: String as PropType<ElevationPropValue>,
+    type: String as PropType<ElevationProp>,
     validator: (elevation: string) => {
-      return ElevationPropValue.includes(elevation)
+      return ElevationPropValues.includes(elevation)
     },
     default: '',
   },
