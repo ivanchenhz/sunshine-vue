@@ -1,22 +1,9 @@
 <template>
-  <div
-      class="ss-w-full ss-h-16 ss-sticky ss-top-0"
-      :style="dimensionStyles"
-      :class="[elevationClasses]">
+  <ss-sheet class="ss-h-16 ss-sticky ss-top-0">
     <slot></slot>
-  </div>
+  </ss-sheet>
 </template>
 
 <script setup lang='ts'>
-import { defineProps } from 'vue'
-import { dimensionProps, useDimension } from '../composables/dimension'
-import { elevationProps, useElevation } from '../composables/elevation'
-
-const props = defineProps({
-  ...dimensionProps,
-  ...elevationProps,
-})
-
-const { dimensionStyles } = useDimension(props)
-const { elevationClasses } = useElevation(props)
+import { SsSheet } from './index'
 </script>
