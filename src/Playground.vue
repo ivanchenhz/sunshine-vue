@@ -1,42 +1,210 @@
 <template>
-  <ss-header></ss-header>
 
-  <p class="ss-flex ss-place-content-center ss-py-24 ss-text-8xl ss-text-pink-40">
-    Hello {{ lib }}
-  </p>
+  <ss-header>
+    <button @click="sidebar = !sidebar">|||</button>
+  </ss-header>
+
+  <ss-aside class="ss-w-64" v-model:show="sidebar">
+    <ul>
+      <li>Hello</li>
+      <li>Hello</li>
+      <li>Hello</li>
+      <li>Hello</li>
+      <li>Hello</li>
+    </ul>
+  </ss-aside>
+
+  <ss-container fluid horizontal class="ss-h-full">
 
 
-  <ss-container>
-    <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
-      <ss-sheet rounded="" elevation="lg"
-                class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
 
-      <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+    <ss-container>
 
-      <ss-alert rounded="lg" elevation="lg">
-        <template #prepend>
-          <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
-        </template>
+      <p class="ss-flex ss-place-content-center ss-py-24 ss-text-8xl ss-text-pink-40">
+        Hello {{ lib }}
+      </p>
 
-        hello
+      <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
+        <ss-sheet rounded="" elevation="lg"
+                  class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
 
-        <template #append>
-          there
-        </template>
-      </ss-alert>
+        <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
 
-      <ss-alert :closable="true">This is some alert message, </ss-alert>
-    </div>
+        <ss-alert rounded="lg" elevation="lg">
+          <template #prepend>
+            <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
+          </template>
+
+          hello
+
+          <template #append>
+            there
+          </template>
+        </ss-alert>
+
+        <ss-alert :closable="true">This is some alert message, </ss-alert>
+      </div>
+
+      <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
+        <ss-sheet rounded="" elevation="lg"
+                  class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-alert rounded="lg" elevation="lg">
+          <template #prepend>
+            <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
+          </template>
+
+          hello
+
+          <template #append>
+            there
+          </template>
+        </ss-alert>
+
+        <ss-alert :closable="true">This is some alert message, </ss-alert>
+      </div>
+
+      <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
+        <ss-sheet rounded="" elevation="lg"
+                  class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-alert rounded="lg" elevation="lg">
+          <template #prepend>
+            <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
+          </template>
+
+          hello
+
+          <template #append>
+            there
+          </template>
+        </ss-alert>
+
+        <ss-alert :closable="true">This is some alert message, </ss-alert>
+      </div>
+
+      <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
+        <ss-sheet rounded="" elevation="lg"
+                  class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-alert rounded="lg" elevation="lg">
+          <template #prepend>
+            <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
+          </template>
+
+          hello
+
+          <template #append>
+            there
+          </template>
+        </ss-alert>
+
+        <ss-alert :closable="true">This is some alert message, </ss-alert>
+      </div>
+
+      <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
+        <ss-sheet rounded="" elevation="lg"
+                  class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-alert rounded="lg" elevation="lg">
+          <template #prepend>
+            <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
+          </template>
+
+          hello
+
+          <template #append>
+            there
+          </template>
+        </ss-alert>
+
+        <ss-alert :closable="true">This is some alert message, </ss-alert>
+      </div>
+
+      <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
+        <ss-sheet rounded="" elevation="lg"
+                  class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-alert rounded="lg" elevation="lg">
+          <template #prepend>
+            <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
+          </template>
+
+          hello
+
+          <template #append>
+            there
+          </template>
+        </ss-alert>
+
+        <ss-alert :closable="true">This is some alert message, </ss-alert>
+      </div>
+
+      <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
+        <ss-sheet rounded="" elevation="lg"
+                  class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-alert rounded="lg" elevation="lg">
+          <template #prepend>
+            <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
+          </template>
+
+          hello
+
+          <template #append>
+            there
+          </template>
+        </ss-alert>
+
+        <ss-alert :closable="true">This is some alert message, </ss-alert>
+      </div>
+
+      <div class="ss-grid ss-gap-8 ss-place-items-center ss-grid-cols-2 ">
+        <ss-sheet rounded="" elevation="lg"
+                  class="ss-border-l-8 ss-bg-blue-20 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-sheet rounded="full" elevation="lg" class="ss-bg-pink-30 dark:ss-bg-yellow-60 ss-w-80 ss-h-8"></ss-sheet>
+
+        <ss-alert rounded="lg" elevation="lg">
+          <template #prepend>
+            <beaker-icon class="ss-w-4 ss-h-4"></beaker-icon>
+          </template>
+
+          hello
+
+          <template #append>
+            there
+          </template>
+        </ss-alert>
+
+        <ss-alert :closable="true">This is some alert message, </ss-alert>
+      </div>
+    </ss-container>
+
   </ss-container>
 
 </template>
 
 <script setup lang="ts">
-import { SsSheet, SsAlert, SsContainer, SsHeader } from './components'
+import { SsSheet, SsAlert, SsContainer, SsHeader, SsAside } from './components'
 
 
 import { BeakerIcon } from '@heroicons/vue/solid'
 import { XIcon } from '@heroicons/vue/outline'
+import { ref } from 'vue'
 
 const lib = 'Sunshine'
+let sidebar = ref<boolean>(true)
 </script>

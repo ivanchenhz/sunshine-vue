@@ -1,5 +1,5 @@
 <template>
-  <ss-sheet class="ss-h-16 ss-top-0" position="sticky">
+  <ss-sheet class="ss-h-16 ss-w-full ss-top-0" position="sticky">
     <header>
       <slot></slot>
     </header>
