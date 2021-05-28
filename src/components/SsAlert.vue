@@ -1,23 +1,25 @@
 <template>
-  <SsSheet v-if="active" class="ss-p-4 ss-pr-6 ss-border-l-8 ss-min-w-[320px] ss-flex ss-items-center ss-relative">
-    <div v-if="$slots.prepend" class="ss-mr-1">
-      <slot name="prepend"></slot>
-    </div>
+  <SsSheet v-if="active" class="ss-border-l-8 ss-min-w-[320px]">
+    <section class="ss-p-4 ss-pr-6 ss-flex ss-items-center ss-relative">
+      <div v-if="$slots.prepend" class="ss-mr-1">
+        <slot name="prepend"></slot>
+      </div>
 
-    <slot></slot>
+      <slot></slot>
 
-    <div v-if="$slots.append" class="ss-ml-auto">
-      <slot name="append"></slot>
-    </div>
+      <div v-if="$slots.append" class="ss-ml-auto">
+        <slot name="append"></slot>
+      </div>
 
-    <div
-        v-if="$slots.close || props.closable"
-        class="ss-absolute ss-right-2 ss-top-2 ss-cursor-pointer"
-        @click="closeAlert">
-      <slot name="close">
-        <x-icon class="ss-w-3"></x-icon>
-      </slot>
-    </div>
+      <div
+          v-if="$slots.close || props.closable"
+          class="ss-absolute ss-right-2 ss-top-2 ss-cursor-pointer"
+          @click="closeAlert">
+        <slot name="close">
+          <x-icon class="ss-w-3"></x-icon>
+        </slot>
+      </div>
+    </section>
   </SsSheet>
 </template>
 
