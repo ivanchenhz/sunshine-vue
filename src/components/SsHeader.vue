@@ -1,6 +1,6 @@
 <template>
   <ss-sheet class="ss-h-16 ss-w-full ss-top-0" position="sticky">
-    <header>
+    <header class="ss-h-full ss-flex ss-items-center ss-px-4">
       <slot></slot>
     </header>
   </ss-sheet>

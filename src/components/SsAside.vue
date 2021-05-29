@@ -1,14 +1,14 @@
 <template>
   <ss-sheet
       v-show="show"
-      class="ss-w-80 ss-top-0 ss-bottom-0" position="fixed">
+      class="ss-z-10 ss-w-80 ss-top-0 ss-bottom-0 ss-bg-white" position="fixed">
     <aside class="ss-p-4 ss-relative">
       <slot></slot>
       <div
           class="ss-absolute ss-right-2 ss-top-2 ss-cursor-pointer"
           @click="handleClose">
         <slot name="close">
-          <x-icon class="ss-w-3"></x-icon>
+          <x-icon class="ss-w-4"></x-icon>
         </slot>
       </div>
     </aside>

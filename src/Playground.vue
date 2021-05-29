@@ -1,10 +1,11 @@
 <template>
-
   <ss-header>
-    <button @click="sidebar = !sidebar">|||</button>
+    <ss-btn @click="aside = !aside">
+      <menu-icon class="ss-w-4"></menu-icon>
+    </ss-btn>
   </ss-header>
 
-  <ss-aside class="ss-w-64" v-model:show="sidebar">
+  <ss-aside class="ss-w-64" v-model:show="aside">
     <ul>
       <li>Hello</li>
       <li>Hello</li>
@@ -198,13 +199,13 @@
 </template>
 
 <script setup lang="ts">
-import { SsSheet, SsAlert, SsContainer, SsHeader, SsAside } from './components'
+import { SsSheet, SsAlert, SsContainer, SsHeader, SsAside, SsBtn } from './components'
 
 
 import { BeakerIcon } from '@heroicons/vue/solid'
-import { XIcon } from '@heroicons/vue/outline'
+import { XIcon, MenuIcon } from '@heroicons/vue/outline'
 import { ref } from 'vue'
 
 const lib = 'Sunshine'
-let sidebar = ref<boolean>(true)
+let aside = ref<boolean>(false)
 </script>
