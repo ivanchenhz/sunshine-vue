@@ -1,6 +1,7 @@
 <template>
   <ss-sheet
       v-show="show"
+      elevation="lg"
       class="ss-z-10 ss-w-80 ss-top-0 ss-bottom-0 ss-bg-white" position="fixed">
     <aside class="ss-p-4 ss-relative">
       <slot></slot>

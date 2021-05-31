@@ -3,7 +3,6 @@
     <button
         class="ss-btn ss-w-full ss-h-full
         ss-flex ss-items-center ss-justify-center
-        hover:ss-bg-opacity-80 active:ss-bg-opacity-25
         focus:ss-outline-none">
       <slot></slot>
     </button>
@@ -43,8 +42,32 @@ const propsClasses = computed(() => {
 })
 </script>
 
+<style>
+:root {
+  --ss-btn-primary-bg: theme('colors.blue.60');
+  --ss-btn-default-primary-bg--hover: theme('colors.blue.70');
+}
+</style>
+
 <style scoped>
-.ss-btn {
-  padding: 5px 16px;
+.ss-btn-sheet {
+  @apply ss-h-8;
+
+  background-color: var(--ss-btn-default-primary-bg);
+  &:hover {
+    background-color: var(--ss-btn-default-primary-bg--hover);
+  }
+
+  & .ss-btn {
+    @apply ss-px-4 ss-text-sm;
+  }
+
+  &.sm {
+    @apply ss-h-6;
+
+    & .ss-btn {
+      @apply ss-px-3 ss-text-xs;
+    }
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div :class="layoutClasses">
+  <div class="ss-flex" :class="layoutClasses">
     <slot></slot>
   </div>
 </template>

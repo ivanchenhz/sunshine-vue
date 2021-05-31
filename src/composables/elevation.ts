@@ -22,7 +22,7 @@ export const elevationProps = {
     validator: (elevation: string) => {
       return ElevationPropValues.includes(elevation)
     },
-    default: '',
+    default: 'none',
   },
 }
 
