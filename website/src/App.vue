@@ -7,12 +7,15 @@
       </template>
       Hello
     </ss-alert>
+
+    <ss-btn primary>Hello</ss-btn>
+    <ss-btn secondary sm>Hello</ss-btn>
   </div>
 
 </template>
 
 <script setup lang='ts'>
-import { SsSheet, SsAlert } from 'sunshine-vue';
+import { SsSheet, SsAlert, SsBtn } from 'sunshine-vue';
 
 import { KeyIcon } from '@heroicons/vue/outline'
 </script>

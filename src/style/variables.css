@@ -1,0 +1,4 @@
+:root {
+    --ss-primary-text: var(--ss-color-gray-05);
+    --ss-secondary-text: var(--ss-color-gray-100);
+}

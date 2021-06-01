@@ -33,7 +33,8 @@ const propsClasses = computed(() => {
   const classes: string[] = []
 
   Object.keys(props).forEach(key => {
-    if (props[key]) {
+    const keyTyped = key as keyof typeof props
+    if (props[keyTyped]) {
       classes.push(key)
     }
   })
@@ -43,31 +44,61 @@ const propsClasses = computed(() => {
 </script>
 
 <style>
+@import "../style/variables.css";
+
 :root {
-  --ss-btn-primary-bg: theme('colors.blue.60');
-  --ss-btn-default-primary-bg--hover: theme('colors.blue.70');
+  --ss-btn-default-primary-bg: var(--ss-color-primary-60);
+  --ss-btn-default-primary-bg__hover: var(--ss-color-primary-70);
+  --ss-btn-default-primary-bg__active: var(--ss-color-primary-80);
+
+  --ss-btn-default-secondary-bg: var(--ss-color-secondary-20);
+  --ss-btn-default-secondary-bg__hover: var(--ss-color-secondary-30);
+  --ss-btn-default-secondary-bg__active: var(--ss-color-secondary-40);
 }
 </style>
 
 <style scoped>
 .ss-btn-sheet {
+  @apply ss-rounded-full;
+
   @apply ss-h-8;
-
-  background-color: var(--ss-btn-default-primary-bg);
-  &:hover {
-    background-color: var(--ss-btn-default-primary-bg--hover);
-  }
-
   & .ss-btn {
     @apply ss-px-4 ss-text-sm;
   }
 
   &.sm {
     @apply ss-h-6;
-
     & .ss-btn {
       @apply ss-px-3 ss-text-xs;
     }
+  }
+}
+
+.ss-btn-sheet.primary {
+  & .ss-btn {
+    color: var(--ss-primary-text);
+  }
+
+  background-color: var(--ss-btn-default-primary-bg);
+  &:hover {
+    background-color: var(--ss-btn-default-primary-bg__hover);
+  }
+  &:active {
+    background-color: var(--ss-btn-default-primary-bg__active);
+  }
+}
+
+.ss-btn-sheet.secondary {
+  & .ss-btn {
+    color: var(--ss-secondary-text);
+  }
+
+  background-color: var(--ss-btn-default-secondary-bg);
+  &:hover {
+    background-color: var(--ss-btn-default-secondary-bg__hover);
+  }
+  &:active {
+    background-color: var(--ss-btn-default-secondary-bg__active);
   }
 }
 </style>

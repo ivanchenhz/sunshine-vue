@@ -1,4 +1,4 @@
-const colors = require('./colors');
+const colors = require('./colors')
 
 module.exports = {
   prefix: 'ss-',
@@ -10,7 +10,10 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
 
-      theme: colors.blue,
+      primary: colors.blue,
+      secondary: colors.gray,
+      success: colors.green,
+      danger: colors.red,
 
       ...colors,
     },
@@ -22,4 +25,34 @@ module.exports = {
       xl: '0 24px 48px rgba(0,0,0,0.2), 0px 0px rgba(0,0,0,0.12)',
     },
   },
+  plugins: [
+    require('tailwind-css-variables')(
+      {
+        colors: 'color',
+        screens: false,
+        fontFamily: false,
+        fontSize: false,
+        fontWeight: false,
+        lineHeight: false,
+        letterSpacing: false,
+        backgroundSize: false,
+        borderWidth: false,
+        borderRadius: false,
+        width: false,
+        height: false,
+        minWidth: false,
+        minHeight: false,
+        maxWidth: false,
+        maxHeight: false,
+        padding: false,
+        margin: false,
+        boxShadow: false,
+        zIndex: false,
+        opacity: false,
+      },
+      {
+        // options
+      }
+    )
+  ]
 }

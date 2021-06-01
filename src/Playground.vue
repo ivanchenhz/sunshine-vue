@@ -34,8 +34,8 @@
 
       <ss-alert :closable="true">This is some alert message, </ss-alert>
 
-      <ss-btn>Hello</ss-btn>
-      <ss-btn sm>Hello</ss-btn>
+      <ss-btn primary>Hello</ss-btn>
+      <ss-btn secondary sm>Hello</ss-btn>
     </div>
 
   </ss-container>
