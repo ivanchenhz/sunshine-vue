@@ -46,15 +46,27 @@ const propsClasses = computed(() => {
 <style>
 @import "../style/variables.css";
 
-:root {
-  --ss-btn-default-primary-bg: var(--ss-color-primary-60);
-  --ss-btn-default-primary-bg__hover: var(--ss-color-primary-70);
-  --ss-btn-default-primary-bg__active: var(--ss-color-primary-80);
-
-  --ss-btn-default-secondary-bg: var(--ss-color-secondary-20);
-  --ss-btn-default-secondary-bg__hover: var(--ss-color-secondary-30);
-  --ss-btn-default-secondary-bg__active: var(--ss-color-secondary-40);
+@define-mixin btnStyleColors-60 $style {
+  :root {
+    --ss-btn-default-$(style)-bg: var(--ss-color-$(style)-60);
+    --ss-btn-default-$(style)-bg__hover: var(--ss-color-$(style)-70);
+    --ss-btn-default-$(style)-bg__active: var(--ss-color-$(style)-80);
+  }
 }
+
+@define-mixin btnStyleColors-20 $style {
+  :root {
+    --ss-btn-default-$(style)-bg: var(--ss-color-$(style)-20);
+    --ss-btn-default-$(style)-bg__hover: var(--ss-color-$(style)-30);
+    --ss-btn-default-$(style)-bg__active: var(--ss-color-$(style)-40);
+  }
+}
+
+@mixin btnStyleColors-60 primary;
+@mixin btnStyleColors-20 secondary;
+@mixin btnStyleColors-60 success;
+@mixin btnStyleColors-60 danger;
+@mixin btnStyleColors-20 ghost;
 </style>
 
 <style scoped>
@@ -74,31 +86,25 @@ const propsClasses = computed(() => {
   }
 }
 
-.ss-btn-sheet.primary {
-  & .ss-btn {
-    color: var(--ss-primary-text);
-  }
+@define-mixin btnStyle $style {
+  .ss-btn-sheet.$(style) {
+    & .ss-btn {
+      color: var(--ss-$(style)-text);
+    }
 
-  background-color: var(--ss-btn-default-primary-bg);
-  &:hover {
-    background-color: var(--ss-btn-default-primary-bg__hover);
-  }
-  &:active {
-    background-color: var(--ss-btn-default-primary-bg__active);
+    background-color: var(--ss-btn-default-$(style)-bg);
+    &:hover {
+      background-color: var(--ss-btn-default-$(style)-bg__hover);
+    }
+    &:active {
+      background-color: var(--ss-btn-default-$(style)-bg__active);
+    }
   }
 }
 
-.ss-btn-sheet.secondary {
-  & .ss-btn {
-    color: var(--ss-secondary-text);
-  }
-
-  background-color: var(--ss-btn-default-secondary-bg);
-  &:hover {
-    background-color: var(--ss-btn-default-secondary-bg__hover);
-  }
-  &:active {
-    background-color: var(--ss-btn-default-secondary-bg__active);
-  }
-}
+@mixin btnStyle primary;
+@mixin btnStyle secondary;
+@mixin btnStyle success;
+@mixin btnStyle danger;
+@mixin btnStyle ghost;
 </style>

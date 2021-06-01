@@ -14,6 +14,7 @@ module.exports = {
       secondary: colors.gray,
       success: colors.green,
       danger: colors.red,
+      ghost: colors.gray,
 
       ...colors,
     },
