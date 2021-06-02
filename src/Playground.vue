@@ -39,6 +39,37 @@
       <ss-btn success>Success</ss-btn>
       <ss-btn danger>Danger</ss-btn>
       <ss-btn ghost>Ghost</ss-btn>
+
+      <ss-btn primary outline>Primary Outline</ss-btn>
+      <ss-btn secondary outline>Secondary Outline</ss-btn>
+      <ss-btn success outline>Success Outline</ss-btn>
+      <ss-btn danger outline>Danger Outline</ss-btn>
+
+      <ss-btn disabled>Disabled</ss-btn>
+      <ss-btn disabled sm>Disabled Small</ss-btn>
+
+      <ss-btn icon primary>
+        <annotation-icon class="ss-w-3 ss-h-3"></annotation-icon>
+      </ss-btn>
+
+      <ss-btn icon secondary>
+        <annotation-icon class="ss-w-3 ss-h-3"></annotation-icon>
+      </ss-btn>
+
+      <ss-btn icon sm success>
+        <annotation-icon class="ss-w-3 ss-h-3"></annotation-icon>
+      </ss-btn>
+
+      <ss-btn icon danger>
+        <annotation-icon class="ss-w-3 ss-h-3"></annotation-icon>
+      </ss-btn>
+
+      <ss-btn icon ghost>
+        <annotation-icon class="ss-w-3 ss-h-3"></annotation-icon>
+      </ss-btn>
+
+      <ss-btn hyperlink>Hyperlink</ss-btn>
+      <ss-btn hyperlink disabled>Hyperlink</ss-btn>
     </div>
 
   </ss-container>
@@ -50,7 +81,7 @@ import { SsSheet, SsAlert, SsContainer, SsHeader, SsAside, SsBtn } from './compo
 
 
 import { BeakerIcon } from '@heroicons/vue/solid'
-import { XIcon, MenuIcon } from '@heroicons/vue/outline'
+import { XIcon, MenuIcon, AnnotationIcon } from '@heroicons/vue/outline'
 import { ref } from 'vue'
 
 let aside = ref<boolean>(false)
