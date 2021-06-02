@@ -44,29 +44,33 @@ const propsClasses = computed(() => {
 </script>
 
 <style>
-@import "../style/variables.css";
-
-@define-mixin btnStyleColors-60 $style {
+@define-mixin btnBgVar $style, $color, $shadeNormal, $shadeHover, $shadeActive {
   :root {
-    --ss-btn-default-$(style)-bg: var(--ss-color-$(style)-60);
-    --ss-btn-default-$(style)-bg__hover: var(--ss-color-$(style)-70);
-    --ss-btn-default-$(style)-bg__active: var(--ss-color-$(style)-80);
+    --ss-btn-$(style)-bg: var(--ss-color-$(color)-$(shadeNormal));
+    --ss-btn-$(style)-bg__hover: var(--ss-color-$(color)-$(shadeHover));
+    --ss-btn-$(style)-bg__active: var(--ss-color-$(color)-$(shadeActive));
   }
 }
 
-@define-mixin btnStyleColors-20 $style {
+@mixin btnBgVar primary, blue, 60, 70, 80;
+@mixin btnBgVar secondary, gray, 20, 30, 40;
+@mixin btnBgVar success, green, 60, 70, 80;
+@mixin btnBgVar danger, red, 60, 70, 80;
+@mixin btnBgVar ghost, gray, 0, 30, 40;
+
+
+@define-mixin btnTextVar $style, $color, $shade {
   :root {
-    --ss-btn-default-$(style)-bg: var(--ss-color-$(style)-20);
-    --ss-btn-default-$(style)-bg__hover: var(--ss-color-$(style)-30);
-    --ss-btn-default-$(style)-bg__active: var(--ss-color-$(style)-40);
+    --ss-btn-$(style)-text: var(--ss-color-$(color)-$(shade));
   }
 }
 
-@mixin btnStyleColors-60 primary;
-@mixin btnStyleColors-20 secondary;
-@mixin btnStyleColors-60 success;
-@mixin btnStyleColors-60 danger;
-@mixin btnStyleColors-20 ghost;
+@mixin btnTextVar primary, gray, 05;
+@mixin btnTextVar secondary, gray, 100;
+@mixin btnTextVar success, gray, 05;
+@mixin btnTextVar danger, gray, 05;
+@mixin btnTextVar ghost, gray, 100;
+
 </style>
 
 <style scoped>
@@ -89,15 +93,15 @@ const propsClasses = computed(() => {
 @define-mixin btnStyle $style {
   .ss-btn-sheet.$(style) {
     & .ss-btn {
-      color: var(--ss-$(style)-text);
+      color: var(--ss-btn-$(style)-text);
     }
 
-    background-color: var(--ss-btn-default-$(style)-bg);
+    background-color: var(--ss-btn-$(style)-bg);
     &:hover {
-      background-color: var(--ss-btn-default-$(style)-bg__hover);
+      background-color: var(--ss-btn-$(style)-bg__hover);
     }
     &:active {
-      background-color: var(--ss-btn-default-$(style)-bg__active);
+      background-color: var(--ss-btn-$(style)-bg__active);
     }
   }
 }

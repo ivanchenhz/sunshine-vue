@@ -10,12 +10,6 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
 
-      primary: colors.blue,
-      secondary: colors.gray,
-      success: colors.green,
-      danger: colors.red,
-      ghost: colors.gray,
-
       ...colors,
     },
     boxShadow: {
